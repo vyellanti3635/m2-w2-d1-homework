@@ -1,0 +1,126 @@
+header {
+    background: url(images/central_park.jpg) center center no-repeat;  /* place image as background */
+    background-size: cover; /* scale background image with the width of the header */
+    /*background-position: 0 -200px;*/
+    /*background-repeat: no-repeat;*/
+    height: 400px; /* give header some height to display the background image */
+    padding-top: 100px;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 20px;
+}
+li a {
+    text-decoration: none; /* Remove Underline */
+}
+li a:link {
+    color: #000; /* Before Click */
+}
+li a:visited {
+    color:#818db3; /* After Click */
+}
+li a:hover {
+    color:#333; /* Mouse Over */
+}
+li a:active {
+    color:#753a30; /* Mouse Down */
+}
+nav {
+    background-color:rgb(255, 245, 238);
+    height: 50px;
+    text-align: center;
+    padding-top: 2px;
+}
+main {
+    margin: 50px;
+}
+main h1 {
+    color:rgb(129, 141, 179);
+    font-family: arial;
+}
+table {
+    margin-top: 35px;
+}
+table, caption, th, td {
+    border: 1px solid #000;
+}
+th, td {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+}
+caption {
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 40px;
+    padding-top: 15px;
+    color: #753a30;
+}
+main #album #photo img {
+    width: 400px;
+}
+footer {
+    height: 40px;
+    background-color:rgb(129, 141, 179);
+    text-align: center;
+    padding-top: 20px;
+    color:rgb(211, 218, 240);
+}
+label {
+    display: block;
+    margin: 15px 0 0 0;
+}
+input {
+    width: 300px;
+}
+input[type="radio"] {
+    width: 25px;
+}
+textarea {
+    width: 300px;
+}
+input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
+}
+
+/* Responsive main area (mobile first: columns are stacked) */
+main .columns {
+    display: grid;
+    grid-gap: 30px;
+}
+main .columns p {
+    margin-top: 0;
+}
+main .columns img {
+    width: 100%; /* scale image with the width of its column */
+    height: auto;
+}
+
+/* Is the screen 600 pixels or larger? Make it two columns. */
+@media (min-width: 600px) {
+    main .columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Is the screen smaller than 600 pixels? Use less space around the content. */
+@media (max-width: 599px) {
+    header {
+        padding-left: 30px;
+    }
+    nav ul {
+        padding: 0;
+    }
+    li {
+        padding: 0 10px;
+    }
+    main {
+        margin: 30px 20px;
+    }
+}
